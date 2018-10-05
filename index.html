@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <style>
+    body{
+font-family:-apple-system,BlinkMacSystemFont,"Microsoft JhengHei","Segoe UI","Roboto","Helvetica Neue", Arial, sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
     .bg-cover {
       background-position: center center;
       background-size: cover;
@@ -28,55 +31,138 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <!-- narbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
     <a class="navbar-brand" href="https://oukt.github.io/myWebsite0925/">LA 4:00p.m.</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="https://oukt.github.io/myWebsite0925/">首頁 <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="file:///C:/Users/user/Desktop/demo/mywebsite.html">首頁 <span class="sr-only">(current)</span></a>
         </li>
-
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="https://oukt.github.io/shop/" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             商品
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://oukt.github.io/shop/">ZoomKobe系列</a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="https://oukt.github.io/shop/">籃球</a>
+            <a class="dropdown-item" href="https://oukt.github.io/shop/">Zoom Kobe 系列</a>
             <a class="dropdown-item" href="https://oukt.github.io/shop/">各隊球衣</a>
-            <a class="dropdown-item" href="https://oukt.github.io/shop/">籃球</a>
           </div>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a href="" class="btn btn-outline-primary mr-2">登入</a>
-        <a href="" class="btn btn-outline-primary">註冊</a>
+        <a href="" class="btn btn-outline-danger mr-1" data-toggle="modal" data-target="#inputModal">登入</a>
+        <!-- 會員登入Modal -->
+        <div class=" modal fade " id="inputModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-primary   text-white">
+                <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">姓名</label>
+                      <input type="email" class="form-control ml-2 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="請輸入姓名" required>
+                    </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">帳號</label>
+                  <input type="email" class="form-control ml-2 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="請輸入電子郵件">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">密碼</label>
+                    <input type="password" class="form-control ml-2" id="exampleInputPassword1" placeholder="請輸入密碼">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <a href="" class="mr-auto " data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">還未註冊帳號</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">登入</button>
+                <button type="button" class="btn btn-secondary">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="" class="btn btn-outline-danger mr-1" data-toggle="modal" data-target="#exampleModal">註冊</a>
+        <!-- 會員註冊Modal -->
+        <div class=" modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">會員註冊</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">註冊會員名稱</label>
+                      <input type="text" class="form-control ml-2 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="請輸入姓名" required>
+                    </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">註冊會員帳號</label>
+                  <input type="email" class="form-control ml-2 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="請輸入電子郵件" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">註冊會員密碼</label>
+                    <input type="password" class="form-control ml-2" id="exampleInputPassword1" placeholder="請輸入密碼" required>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <a href="" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#inputModal">已經有會員帳號</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">註冊</button>
+                <button type="button" class="btn btn-secondary">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
       </form>
     </div>
   </nav>
-  <div class="dropdown ml-auto">
-    <button class=" btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
-      <i class="fas fa-shopping-cart fa-3x"></i>
-      <span class="badge badge-danger">12</span>
-    </button>
-    <div class="dropdown-menu" style="width:300px">
-      <form class="px-4 py-3">
-        <h6>以下選購</h6>
-        <div class="dropdown-divider"></div>
-        <a href="" class="btn btn-info">結帳去</a>
+  <!-- shopcart-->
+  <div class="dropdown ml-auto bg-light">
+      <button class=" btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-shopping-cart fa-3x"></i>
+        <span class="badge badge-danger">0</span>
+      </button>
+      <div class="dropdown-menu" style="width:300px">
+        <form class="px-4 py-3">
+          <h6>以下選購</h6>    
+          <div class="dropdown-divider"></div>
+            <hr>
+              <a href="" class="btn btn-danger ml-auto">結帳去</a>       
+      </div>
     </div>
-  </div>
   <div class="jumbotron jumbotron-fluid bg-cover d-flex align-items-end">
     <div class="container">
       <div class="bg-lighter">
         <h1 class="display-4 text-center">好康大回饋</h1>
-        <p class="lead text-center">his is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <p class="lead text-center">his is a modified jumbotron that occupies the entire horizontal space of its
+          parent.</p>
       </div>
     </div>
   </div>
@@ -96,114 +182,150 @@
             <div class="row">
               <div class="col-md-4 mb-2">
                 <div class="card text-center h-100">
-                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom5-1.jpg?raw=true" " alt="Card image cap ">
-                                            <div class="card-body ">
-                                              <h5 class="card-title ">Card title</h5>
-                                              <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom5-1.jpg?raw=true"
+                    " alt=" Card image cap ">
+                                            <div class=" card-body
+                    ">
+                                              <h5 class=" card-title
+                    ">Card title</h5>
+                                              <p class=" card-text
+                    ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                             </div>
-                                            <div class="card-footer ">
-                                              <a href="file:///F:/demo/0.html# " class="btn btn-info ">請選購</a>
+                                            <div class="
+                    card-footer ">
+                                              <a href=" file:///F:/demo/0.html#
+                    " class=" btn btn-info
+                    ">請選購</a>
                                             </div>
                                           </div>
                             </div>
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom5.jpg?raw=true " alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">Zoom 5</h5>
-                                      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="
+                    col-md-4 mb-2 ">
+                                <div class=" card text-center h-100
+                    ">
+                                    <img class=" card-img-top " src=" https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom5.jpg?raw=true
+                    " alt=" Card image cap ">
+                                    <div class=" card-body
+                    ">
+                                      <h5 class=" card-title
+                    ">Zoom 5</h5>
+                                      <p class=" card-text
+                    ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom6.jpg?raw=true " alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">ZOOM 6</h5>
-                                      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
+                                    <div class="
+                    card-footer ">
+                                      <div class=" a btn btn-info
+                    ">請選購</div>
                                     </div>
                                   </div>
                             </div>
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom5l.jpg?raw=true" alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">ZOOM5 黃</h5>
-                                      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="
+                    col-md-4 mb-2 ">
+                                <div class=" card text-center h-100
+                    ">
+                                    <img class=" card-img-top " src=" https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom6.jpg?raw=true
+                    " alt=" Card image cap ">
+                                    <div class=" card-body
+                    ">
+                                      <h5 class=" card-title
+                    ">ZOOM 6</h5>
+                                      <p class=" card-text
+                    ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom7.jpg?raw=true " alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">Zoom 7</h5>
-                                      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
+                                    <div class="
+                    card-footer ">
+                                      <div class=" a btn btn-info
+                    ">請選購</div>
                                     </div>
                                   </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane " id="p-2">
-                        <div class="row ">
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/clothes/clothesW.JPG?raw=true" alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">Golden State Warriors球衣</h5>
-                                      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/clothes/ckothesL.JPG?raw=true" alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">LBJ騎士(前)球衣</h5>
-                                      <p class="card-text ">轉隊大特價</p>
-                                    </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/clothes/clothesK.jpg?raw=true"alt="Card image cap ">
-                                    <div class="card-body ">
-                                      <h5 class="card-title ">經典湖人紫金球衣</h5>
-                                      <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                    <div class="card-footer ">
-                                      <div class="a btn btn-info ">請選購</div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane " id="p-3">
-                        <div class="row ">
-                            <div class="col-md-4 mb-2 ">
-                                <div class="card text-center h-100 ">
-                                    <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball1.jpg?raw=true "" alt="Card image cap">
+                            <div class="
+                    col-md-4 mb-2 ">
+                                <div class=" card text-center h-100
+                    ">
+                                    <img class=" card-img-top " src=" https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom5l.jpg?raw=true"
+                    alt="Card image cap ">
+                  <div class="card-body ">
+                    <h5 class="card-title ">ZOOM5 黃</h5>
+                    <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="card-footer ">
+                    <div class="a btn btn-info ">請選購</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-2 ">
+                <div class="card text-center h-100 ">
+                  <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/shoes/zoom7.jpg?raw=true "
+                    alt="Card image cap ">
+                  <div class="card-body ">
+                    <h5 class="card-title ">Zoom 7</h5>
+                    <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="card-footer ">
+                    <div class="a btn btn-info ">請選購</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane " id="p-2">
+            <div class="row ">
+              <div class="col-md-4 mb-2 ">
+                <div class="card text-center h-100 ">
+                  <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/clothes/clothesW.JPG?raw=true"
+                    alt="Card image cap ">
+                  <div class="card-body ">
+                    <h5 class="card-title ">Golden State Warriors球衣</h5>
+                    <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="card-footer ">
+                    <div class="a btn btn-info ">請選購</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-2 ">
+                <div class="card text-center h-100 ">
+                  <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/clothes/ckothesL.JPG?raw=true"
+                    alt="Card image cap ">
+                  <div class="card-body ">
+                    <h5 class="card-title ">LBJ騎士(前)球衣</h5>
+                    <p class="card-text ">轉隊大特價</p>
+                  </div>
+                  <div class="card-footer ">
+                    <div class="a btn btn-info ">請選購</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-2 ">
+                <div class="card text-center h-100 ">
+                  <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/clothes/clothesK.jpg?raw=true"
+                    alt="Card image cap ">
+                  <div class="card-body ">
+                    <h5 class="card-title ">經典湖人紫金球衣</h5>
+                    <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="card-footer ">
+                    <div class="a btn btn-info ">請選購</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane " id="p-3">
+            <div class="row ">
+              <div class="col-md-4 mb-2 ">
+                <div class="card text-center h-100 ">
+                  <img class="card-img-top " src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball1.jpg?raw=true "" alt="
+                    Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Nike Nike Game Tack 7號籃球</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                      additional
                       content. This content is a little bit longer.</p>
                   </div>
                   <div class="card-footer">
@@ -213,10 +335,12 @@
               </div>
               <div class="col-md-4 mb-2">
                 <div class="card text-center h-100">
-                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball2.jpg?raw=true" alt="Card image cap">
+                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball2.jpg?raw=true"
+                    alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">SPALDING 斯伯丁 SGT 深溝柔軟膠 - 經典橘 籃球 7號</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                      additional
                       content. This content is a little bit longer.</p>
                   </div>
                   <div class="card-footer">
@@ -226,10 +350,12 @@
               </div>
               <div class="col-md-4 mb-2">
                 <div class="card text-center h-100">
-                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball3.jpg?raw=true" alt="Card image cap">
+                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball3.jpg?raw=true"
+                    alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">SPALDING 斯伯丁 街頭素描 籃球 7號</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                      additional
                       content. This content is a little bit longer.</p>
                   </div>
                   <div class="card-footer">
@@ -239,10 +365,12 @@
               </div>
               <div class="col-md-4 mb-2">
                 <div class="card text-center h-100">
-                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball4.jpg?raw=true" alt="Card image cap">
+                  <img class="card-img-top" src="https://github.com/OUKT/myWebsite0925/blob/master/img/ball/ball4.jpg?raw=true"
+                    alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">SPALDING 斯伯丁 NBA 隊徽球 勇士 Warriors 籃球 7號</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                      additional
                       content. This content is a little bit longer.</p>
                   </div>
                   <div class="card-footer">
@@ -257,6 +385,17 @@
       </div>
     </div>
   </div>
+    <!--footer-->
+    <footer class="bg-dark text-white  py-4 mt-2">
+        <div class="container d-flex justify-content-between">
+          <div> © 2018 LA 4:00 P.M 版權所有。</div> 
+          <div>
+            <a href=""><i class="fab fa-facebook fa-2x text-white"></i></a>
+            <a href=""><i class="fab fa-instagram fa-2x text-white"></i></a>
+          </div> 
+        </div>
+      
+      </footer>
 
 
 
